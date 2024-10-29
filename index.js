@@ -8,22 +8,36 @@ let lengthEl = document.getElementById("length");
 let volumeEl = document.getElementById("volume");
 let massEl = document.getElementById("mass");
 
+function pluralize(unit, value) {
+  return value === 1 ? unit : unit + "s";
+}
+
 function convertLength(value) {
-  return `${value} meters = ${(value * meterToFeet).toFixed(
+  const meters = pluralize("meter", value);
+  const feet = pluralize("foot", value);
+  return `${value} ${meters} = ${(value * meterToFeet).toFixed(
     3
-  )} feet | ${value} feet = ${(value / meterToFeet).toFixed(3)} meters`;
+  )} feet | ${value} feet = ${(value / meterToFeet).toFixed(3)} ${meters}`;
 }
 
 function convertVolume(value) {
-  return `${value} liters = ${(value * literToGallon).toFixed(
+  const liters = pluralize("liter", value);
+  const gallons = pluralize("gallon", value);
+  return `${value} ${liters} = ${(value * literToGallon).toFixed(
     3
-  )} gallons | ${value} gallons = ${(value / literToGallon).toFixed(3)} liters`;
+  )} ${gallons} | ${value} ${gallons} = ${(value / literToGallon).toFixed(
+    3
+  )} ${liters}`;
 }
 
 function convertMass(value) {
-  return `${value} kilos = ${(value * kilogramToPound).toFixed(
+  const kilos = pluralize("kilo", value);
+  const pounds = pluralize("pound", value);
+  return `${value} ${kilos} = ${(value * kilogramToPound).toFixed(
     3
-  )} pounds | ${value} pounds = ${(value / kilogramToPound).toFixed(3)} kilos`;
+  )} ${pounds} | ${value} ${pounds} = ${(value / kilogramToPound).toFixed(
+    3
+  )} ${kilos}`;
 }
 
 convertBtn.addEventListener("click", function () {
