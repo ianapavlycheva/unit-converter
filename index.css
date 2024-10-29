@@ -55,6 +55,12 @@ button {
   border-radius: 5px;
   display: block;
   margin: 30px 0 35px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #b295ff;
 }
 
 .results {
