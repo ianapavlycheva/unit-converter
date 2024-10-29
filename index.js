@@ -54,3 +54,15 @@ convertBtn.addEventListener("click", function () {
   volumeEl.textContent = convertVolume(inputValue);
   massEl.textContent = convertMass(inputValue);
 });
+
+inputEl.addEventListener("focus", function () {
+  if (inputEl.value === "0") {
+    inputEl.value = "";
+  }
+});
+
+inputEl.addEventListener("blur", function () {
+  if (inputEl.value === "") {
+    inputEl.value = "0";
+  }
+});
