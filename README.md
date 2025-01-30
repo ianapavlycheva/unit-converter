@@ -6,7 +6,7 @@ This is a solo project from "The Frontend Developer Career Path" by Scrimba.com.
 
 Converts:
 
-• Length (Meters to Feet and vice versa)
+    • Length (Meters to Feet and vice versa)
 
     • Volume (Liters to Gallons and vice versa)
 
