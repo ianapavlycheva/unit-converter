@@ -44,9 +44,8 @@ convertBtn.addEventListener("click", function () {
   const inputValue = parseFloat(inputEl.value);
 
   if (isNaN(inputValue) || inputValue <= 0) {
-    lengthEl.textContent = "Please enter a valid number.";
-    volumeEl.textContent = "";
-    massEl.textContent = "";
+    alert("Please enter a valid number");
+    inputEl.value = "";
     return;
   }
 
